@@ -1,0 +1,12 @@
+{% set post = contentful.entry('1asN98Ph3mUiCYIYiiqwko') %}
+<html>
+<head>
+  <title>{{ post.title }}</title>
+</head>
+<body>
+  <h1>{{ post.title }}</h1>
+  <h2>{{ post.slug }}</h2>
+  <img src="http:{{ post.featured_image.url() }}" />
+  <div>{{ markdown(post.body) }}</div>
+</body>
+</html>
